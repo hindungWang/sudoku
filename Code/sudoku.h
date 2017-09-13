@@ -15,7 +15,7 @@ int num = 0;
 int flag = 0;
 char ch[200];
 
-bool stringtonum(string str)//¼ì²éÊı×ÖÊÇ·ñÕıÈ· 
+bool stringtonum(string str)//æ£€æŸ¥è¾“å…¥çš„æ•°å­—åˆæ³•æ€§
 {
   int count = 0;
   int stringlen = str.length();
@@ -32,7 +32,7 @@ bool stringtonum(string str)//¼ì²éÊı×ÖÊÇ·ñÕıÈ·
   }
   return true;
 }
-bool Yesdis(int count)
+bool Yesdis(int count)//æ£€æŸ¥æŸä½ç½®æ˜¯å¦å¯ä»¥å¡«å…¥è¯¥æ•°
 {
   int x = count/9;
   int y = count%9;
@@ -40,14 +40,14 @@ bool Yesdis(int count)
 
   for(value = 0; value < 9; ++value)
   {
-    if(sudoku[x][value] == sudoku[x][y] && value != y)
+    if(sudoku[x][value] == sudoku[x][y] && value != y)//æ£€æŸ¥è¡Œ
     {
       return false;
     }
   }
   for(value = 0; value < 9; ++value)
   {
-    if(sudoku[value][y] == sudoku[x][y] && value != x)
+    if(sudoku[value][y] == sudoku[x][y] && value != x)//æ£€æŸ¥åˆ—
     {
       return false;
     }
@@ -55,7 +55,7 @@ bool Yesdis(int count)
   int wightx = x/3*3;
   int wighty = y/3*3;
   int temp;
-  for(value = wightx; value < wightx + 3; ++value)
+  for(value = wightx; value < wightx + 3; ++value)//æ£€æŸ¥ä¹å®«æ ¼é‡Œ
   {
   	for( temp = wighty; temp < wighty + 3; ++temp)
   	{
@@ -69,7 +69,7 @@ bool Yesdis(int count)
   return true;
 }
 
-void backtrace(int count,FILE* fp)
+void backtrace(int count,FILE* fp)//å›æº¯è°ƒç”¨
 {
     if(count == 81)
     {
