@@ -11,7 +11,7 @@ using namespace std;
 
 int sudoku[9][9] = {0};
 int sum = 0;
-int num = 0;
+int num = 1;//解决值为1的bug
 int flag = 0;
 char ch[200];
 
