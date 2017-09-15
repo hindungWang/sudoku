@@ -11,7 +11,7 @@ using namespace std;
 
 int sudoku[9][9] = {0};
 int sum = 0;
-int num = 1;//解决值为1的bug
+int num = 0;
 int flag = 0;
 char ch[200];
 
@@ -28,7 +28,7 @@ bool stringtonum(string str)//检查输入的数字合法性
 	num += (str[stringlen-1]-48)*pow(10,count);
 	count++;
 	stringlen--;
-	if(num > 1000000)return false;
+	if(num - 1> 1000000)return false;
   }
   return true;
 }
