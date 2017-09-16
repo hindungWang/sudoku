@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
 
   if(argc == 1 || argc == 2 || argc > 3)
   {
-    cout<<"输入非法!\n";
+    cout<<"damn it!\n";
   }
   else
   {
@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     string string2 = argv[2];
     if(string1 != "-c" || !stringtonum(string2))
     {
-      cout<<"输入非法!\n";
+      cout<<"damn it!\n";
     }
     else
     {
